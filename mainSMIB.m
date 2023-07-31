@@ -4,8 +4,8 @@ clear all
 % Approximation
 [~,A_l, B_l, A_lq, B_lq, N_lq, A_lqc, B_lqc, N_lqc, ids_lq, ids_lqc] = smibaprox(sys_eq,x0,u0);
 % Reducing
-%[A_lq, B_lq, N_lq, ids_lq] = smibreduce(A_lq,B_lq,N_lq,length(x0));
-%[A_lqc, B_lqc, N_lqc, ids_lqc] = smibreduce(A_lqc,B_lqc,N_lqc,length(x0));
+[A_lq, B_lq, N_lq, ids_lq] = smibreduce(A_lq,B_lq,N_lq,length(x0));
+[A_lqc, B_lqc, N_lqc, ids_lqc] = smibreduce(A_lqc,B_lqc,N_lqc,length(x0));
 % Dimensions of the systems
 sl = size(A_l,1);
 slq = size(A_lq,1);
